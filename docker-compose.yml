@@ -12,13 +12,13 @@ services:
       context: .
       dockerfile: Dockerfile.web
     container_name: "project-1_web"
-    command: python manage.py runserver 0.0.0.0:8001
+    command: python manage.py runserver 0.0.0.0:8002
     volumes:
       - .:/var/www
     working_dir: /var/www/
     tty: true
     restart: always
     ports:
-      - "8001:8001"
+      - "8002:8002"
     depends_on:
       - db

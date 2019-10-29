@@ -4,10 +4,11 @@ ENV PYTHONUNBUFFERED 1
 
 WORKDIR /var/www
 
+#COPY / /var/www
+
 COPY requirements.txt /var/www
 
 RUN pip install -r requirements.txt
 
-CMD python manage.py createsuperuser
 
-#COPY / /var/www
+
